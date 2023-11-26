@@ -12,12 +12,15 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './Nav.css'
+import useAuth from "../../hooks/useAuth";
+import { Button } from "@mui/material";
 
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import logo from '../../assets/logo .png'
 
 const Nav = () => {
+  const {user, loggedOut} = useAuth();
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -36,18 +39,23 @@ const Nav = () => {
     setAnchorElUser(null);
   };
 
+  const handleSignOut = () =>{
+    loggedOut()
+  }
+
   const navLinks = (
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/login">login</NavLink>
-      <NavLink to='available-camps'>Home</NavLink>
+      <NavLink to='/available-camps'>Available Camps</NavLink>
+      <NavLink to='/contactUs'>Contact Us</NavLink>
     </>
   );
 
   return (
     <div>
       <AppBar position="static" className="">
-        <Container maxWidth="xl" className="bg-[#CBE7E4] lg:py-5 text-black font-medium">
+        <Container maxWidth="xl" className="bg-[#CBE7E4] lg:pt-12 lg:pb-4 text-black font-medium">
           <Toolbar disableGutters>
             <Typography
               variant="h6"
@@ -64,7 +72,7 @@ const Nav = () => {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              <img className="w-80" src={logo} alt="" />
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -131,11 +139,17 @@ const Nav = () => {
 
             {/* Login btn or picture==================== */}
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
+              {
+                user ? <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                  <Avatar alt="Remy Sharp" src={user?.photoURL} />
                 </IconButton>
               </Tooltip>
+              :
+              <Link to='/login'><Button variant="contained" size="large" className="">
+              Login
+            </Button></Link>
+              }
               <Menu
                 sx={{ mt: "45px" }}
                 id="menu-appbar"
@@ -152,11 +166,11 @@ const Nav = () => {
                 open={Boolean(anchorElUser)}
                 onClose={handleCloseUserMenu}
               >
-                {settings.map((setting) => (
-                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
+                
+                  <MenuItem  onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center" onClick={handleSignOut}>Logout</Typography>
                   </MenuItem>
-                ))}
+                
               </Menu>
             </Box>
           </Toolbar>

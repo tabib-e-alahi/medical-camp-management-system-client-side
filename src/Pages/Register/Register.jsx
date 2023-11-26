@@ -1,17 +1,34 @@
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Register = () => {
+  const { createUser, updateUserProfile } = useAuth();
+
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     console.log(data);
+    createUser(data.email, data.password).then((result) => {
+      const loggedUser = result.user;
+      console.log(loggedUser);
+
+      updateUserProfile(data.name, data.photoURL)
+        .then(() => {
+          const userInfo = { name: data.name, email: data.email };
+          console.log(userInfo);
+          reset();
+        })
+        .catch((error) => console.log(error));
+    });
   };
+
   return (
     <div className="mt-16 w-1/3 mb-10 mx-auto p-4 rounded-xl border-2 border-sky-400 shadow-md shadow-sky-400">
       <h1 className="text-center text-5xl font-bold my-6 text-sky-400">
