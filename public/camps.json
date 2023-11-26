@@ -1,0 +1,118 @@
+[
+    {
+      "name": "HeartBeat Wellness Camp",
+      "image": "https://i.ibb.co/qxQpQmw/heart.jpg",
+      "fees": 10,
+      "scheduledDateAndTime": "2024-08-10T08:15",
+      "venueLocation": "City Community Center, 123 Main Street, Anytown",
+      "specializedServicesProvided": [
+        "Cardiovascular screenings",
+        "Cholesterol checks",
+        "Blood pressure monitoring",
+        "Heart health education sessions"
+      ],
+      "healthcareProfessionalsInAttendance": [
+        "Cardiologists",
+        "Nurses",
+        "Nutritionists"
+      ],
+      "targetAudience": "Adults aged 30 and above",
+      "participantCount": 120
+    },
+    {
+      "name": "Blossom Women's Wellness Camp",
+      "image": "https://i.ibb.co/3CPjZD3/rmh-interpreter-and-patient.jpg",
+      "fees": 20,
+      "scheduledDateAndTime": "2025-01-05T21:12",
+      "venueLocation": "Community Health Center, 456 Oak Avenue, Cityville",
+      "specializedServicesProvided": [
+        "Gynecological screenings",
+        "Breast health examinations",
+        "Nutrition counseling",
+        "Women's health seminars"
+      ],
+      "healthcareProfessionalsInAttendance": [
+        "Gynecologists",
+        "Women's Health Nurses",
+        "Nutritionists"
+      ],
+      "targetAudience": "Women of all ages",
+      "participantCount": 80
+    },
+    {
+      "name": "SugarCare Diabetes Camp",
+      "image": "https://i.ibb.co/Z8386Gw/diabetis.jpg",
+      "fees": 15,
+      "scheduledDateAndTime": "2025-07-12T12:30",
+      "venueLocation": "Diabetes Center, 789 Maple Street, Healthville",
+      "specializedServicesProvided": [
+        "Blood glucose testing",
+        "Insulin management workshops",
+        "Dietary consultations"
+      ],
+      "healthcareProfessionalsInAttendance": [
+        "Endocrinologists",
+        "Diabetes Educators",
+        "Dietitians"
+      ],
+      "targetAudience": "Individuals with diabetes and their caregivers",
+      "participantCount": 150
+    },
+    {
+      "name": "KiddoCare Pediatrics Camp",
+      "image": "https://i.ibb.co/gTWqHkh/kid.jpg",
+      "fees": 0,
+      "scheduledDateAndTime": "2024-02-15T10:45",
+      "venueLocation": "Pediatric Clinic, 567 Pine Street, Smalltown",
+      "specializedServicesProvided": [
+        "Pediatric vaccinations",
+        "Growth and development assessments",
+        "Parenting workshops"
+      ],
+      "healthcareProfessionalsInAttendance": [
+        "Pediatricians",
+        "Pediatric Nurses",
+        "Child Psychologists"
+      ],
+      "targetAudience": "Infants and children up to 12 years old",
+      "participantCount": 50
+    },
+    {
+      "name": "MindWell Mental Health Camp",
+      "image": "https://i.ibb.co/tXFTf82/mental.jpg",
+      "fees": 5,
+      "scheduledDateAndTime": "2024-05-20T18:22",
+      "venueLocation": "Community Mental Health Center, 789 Elm Street, Townsville",
+      "specializedServicesProvided": [
+        "Mental health screenings",
+        "Counseling sessions",
+        "Stress management workshops"
+      ],
+      "healthcareProfessionalsInAttendance": [
+        "Psychiatrists",
+        "Psychologists",
+        "Licensed Counselors"
+      ],
+      "targetAudience": "Individuals seeking mental health support",
+      "participantCount": 90
+    },
+    {
+      "name": "GoldenAge Senior Wellness Camp",
+      "image": "https://i.ibb.co/Z8cCCFW/medical-camp.jpg",
+      "fees": 10,
+      "scheduledDateAndTime": "2023-12-01T15:30",
+      "venueLocation": "Senior Community Center, 101 Elder Avenue, SeniorCity",
+      "specializedServicesProvided": [
+        "Senior health screenings",
+        "Fitness assessments",
+        "Nutritional guidance"
+      ],
+      "healthcareProfessionalsInAttendance": [
+        "Geriatricians",
+        "Physical Therapists",
+        "Nutritionists"
+      ],
+      "targetAudience": "Seniors aged 60 and above",
+      "participantCount": 60
+    }
+  ]
