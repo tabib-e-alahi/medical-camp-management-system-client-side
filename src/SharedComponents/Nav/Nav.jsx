@@ -55,7 +55,7 @@ const Nav = () => {
   return (
     <div>
       <AppBar position="static" className="">
-        <Container maxWidth="xl" className="bg-[#CBE7E4] lg:pt-12 lg:pb-4 text-black font-medium">
+        <Container maxWidth="xl" className="lg:fixed lg:z-10 lg:bg-opacity-60 bg-[#82aac6] lg:bg-[#CBE7E4]   lg:pt-12 lg:pb-4 text-black font-medium">
           <Toolbar disableGutters>
             <Typography
               variant="h6"

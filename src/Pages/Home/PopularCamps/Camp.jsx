@@ -19,20 +19,20 @@ const Camp = ({ camp }) => {
   console.log(formattedDate);
   //   console.log(camp);
   return (
-    <div className="wrapper p-4 lg:p-10 bg-[#adb8b7]  antialiased text-gray-900 rounded-lg overflow-hidden">
+    <div className="wrapper  lg:p-10 bg-[#adb8b7]  antialiased text-gray-900 rounded-lg overflow-hidden">
       <div className="relative">
         <img
           src={image}
           alt=" random imgee"
-          className="w-full md:w-[600px]  md:h-[400px] object-cover object-center rounded-lg shadow-md"
+          className="w-full md:w-[600px]  md:h-[400px] object-cover object-center md:rounded-lg shadow-md"
         />
         <h2 className="absolute top-2 right-2 font-bold bg-white p-2 rounded-full flex justify-center items-center gap-2">
           Participants:{" "}
           <span className="  text-2xl text-[#f60]">{participantCount}</span>
         </h2>
 
-        <div className="relative px-4 -mt-10 md:-mt-20  lg:hover:-mt-32">
-          <div className="bg-[#d8e2e8] p-4 lg:py-6 lg:px-8 rounded-lg shadow-lg lg:hover:scale-110 ">
+        <div className="md:relative md:px-4  md:-mt-20 ">
+          <div className="bg-[#d8e2e8] p-4 lg:py-6 lg:px-8 md:rounded-lg shadow-lg ">
             <div className="flex justify-between items-center">
               <div className="flex items-baseline">
                 <div className="ml-2 font-bold  text-xs mr-2 tracking-wider">
@@ -55,17 +55,17 @@ const Camp = ({ camp }) => {
               <span className="font-bold">Venue:</span> {venueLocation}
             </div>
             <div className="mt-4 space-y-4">
-              <span className="text-[#156668] text-lg font-bold">
-                <span className="text-black mr-1 text-base font-medium">
+              <span className="text-[#156668] text-lg font-bold flex flex-col">
+                <span className="text-black mr-1 text-sm font-medium">
                   Recommended for:
                 </span>{" "}
-                {targetAudience}
+                <span>{targetAudience}</span>
               </span>
 
-              <div className="flex flex-col  md:flex-row md:justify-between md:items-center lg:gap-10">
-                <div>
+              <div className="flex flex-col-reverse    md:flex-row md:justify-between md:items-center gap-4 md:gap-0 ">
+                <div className="w-fit">
                   <h3 className="font-medium">Special Services:</h3>
-                  <ul className="text-sm p-4 pl-6 lg:p-0 text-gray-600 list-disc">
+                  <ul className="text-sm p-4 pt-2 pl-6 lg:p-0 lg:pl-0 text-gray-600 list-disc">
                     {specializedServicesProvided.map((service, idx) => (
                       <li key={idx}>{service}</li>
                     ))}
@@ -73,7 +73,7 @@ const Camp = ({ camp }) => {
                 </div>
 
                 {/* specializedServicesProvided==== */}
-                <div>
+                <div className="">
                   <h3 className="font-medium text-xl mb-2">Professionals:</h3>
                   <div className="border-2 w-fit p-4 pl-6 rounded overflow-hidden border-[#156668]">
                     <ul className="text-sm font-bold text-gray-600 list-disc ">

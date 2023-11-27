@@ -2,6 +2,7 @@ import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import SocialLogin from "../../SharedComponents/SocialLogin/SocialLogin";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
@@ -119,6 +120,7 @@ const Register = () => {
           </div>
         </div>
       </form>
+      <SocialLogin></SocialLogin>
       <div className="flex justify-center items-center gap-1">
         <p className="font-medium">Already have an account?</p>
         <Link to="/login">

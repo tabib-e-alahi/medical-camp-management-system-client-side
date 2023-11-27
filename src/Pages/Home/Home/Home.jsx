@@ -1,3 +1,4 @@
+import Banner from "../Banner/Banner";
 import PopularCamps from "../PopularCamps/PopularCamps";
 
 
@@ -5,7 +6,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>This is Home</h1>
+      <Banner></Banner>
       <PopularCamps></PopularCamps>
     
     </div>

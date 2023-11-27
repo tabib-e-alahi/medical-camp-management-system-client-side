@@ -26,7 +26,7 @@ const PopularCamps = () => {
   return (
     <div className="max-w-7xl mx-auto mt-10">
       <h1 className="text-4xl font-semibold mb-8">Popular medical camps:</h1>
-      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10 px-10  lg:px-0">
+      <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10  px-4  lg:px-0">
         {camps.map((camp) => (
           <Camp key={camp.name} camp={camp}></Camp>
         ))}
