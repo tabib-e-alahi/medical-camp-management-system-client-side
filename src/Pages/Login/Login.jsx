@@ -1,11 +1,16 @@
 import { Button } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import SocialLogin from "../../SharedComponents/SocialLogin/SocialLogin";
 
 const Login = () => {
   const { signIn } = useAuth();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -25,7 +30,7 @@ const Login = () => {
           popup: "animate__animated animate__fadeOutUp",
         },
       });
-      // navigate(from, { replace: true });
+      navigate(from, { replace: true });
     });
   };
 

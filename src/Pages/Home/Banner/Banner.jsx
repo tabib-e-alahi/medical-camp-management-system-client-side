@@ -29,11 +29,11 @@ const Banner = () => {
               Your journey matters
             </h1>
             <p className="max-w-2xl mb-6  font-semibold lg:mb-8 md:text-lg lg:text-xl text-gray-100">
-              Every patient's success story is a beacon of hope for others.
+              Every patient&rsquo;s success story is a beacon of hope for others.
             </p>
           </div>
 
-          <div className=" lg:mt-0 lg:col-span-5 lg:flex">
+          <div className=" lg:pt-10 lg:mt-0 lg:col-span-5 lg:flex">
             <Carousel>
               {banner.map((b, idx) => (
                 <div

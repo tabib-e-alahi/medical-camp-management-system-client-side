@@ -1,118 +1,255 @@
 [
-    {
-      "name": "HeartBeat Wellness Camp",
-      "image": "https://i.ibb.co/qxQpQmw/heart.jpg",
-      "fees": 10,
-      "scheduledDateAndTime": "2024-08-10T08:15",
-      "venueLocation": "City Community Center, 123 Main Street, Anytown",
-      "specializedServicesProvided": [
-        "Cardiovascular screenings",
-        "Cholesterol checks",
-        "Blood pressure monitoring",
-        "Heart health education sessions"
-      ],
-      "healthcareProfessionalsInAttendance": [
-        "Cardiologists",
-        "Nurses",
-        "Nutritionists"
-      ],
-      "targetAudience": "Adults aged 30 and above",
-      "participantCount": 120
-    },
-    {
-      "name": "Blossom Women's Wellness Camp",
-      "image": "https://i.ibb.co/3CPjZD3/rmh-interpreter-and-patient.jpg",
-      "fees": 20,
-      "scheduledDateAndTime": "2025-01-05T21:12",
-      "venueLocation": "Community Health Center, 456 Oak Avenue, Cityville",
-      "specializedServicesProvided": [
-        "Gynecological screenings",
-        "Breast health examinations",
-        "Nutrition counseling",
-        "Women's health seminars"
-      ],
-      "healthcareProfessionalsInAttendance": [
-        "Gynecologists",
-        "Women's Health Nurses",
-        "Nutritionists"
-      ],
-      "targetAudience": "Women of all ages",
-      "participantCount": 80
-    },
-    {
-      "name": "SugarCare Diabetes Camp",
-      "image": "https://i.ibb.co/Z8386Gw/diabetis.jpg",
-      "fees": 15,
-      "scheduledDateAndTime": "2025-07-12T12:30",
-      "venueLocation": "Diabetes Center, 789 Maple Street, Healthville",
-      "specializedServicesProvided": [
-        "Blood glucose testing",
-        "Insulin management workshops",
-        "Dietary consultations"
-      ],
-      "healthcareProfessionalsInAttendance": [
-        "Endocrinologists",
-        "Diabetes Educators",
-        "Dietitians"
-      ],
-      "targetAudience": "Individuals with diabetes and their caregivers",
-      "participantCount": 150
-    },
-    {
-      "name": "KiddoCare Pediatrics Camp",
-      "image": "https://i.ibb.co/gTWqHkh/kid.jpg",
-      "fees": 0,
-      "scheduledDateAndTime": "2024-02-15T10:45",
-      "venueLocation": "Pediatric Clinic, 567 Pine Street, Smalltown",
-      "specializedServicesProvided": [
-        "Pediatric vaccinations",
-        "Growth and development assessments",
-        "Parenting workshops"
-      ],
-      "healthcareProfessionalsInAttendance": [
-        "Pediatricians",
-        "Pediatric Nurses",
-        "Child Psychologists"
-      ],
-      "targetAudience": "Infants and children up to 12 years old",
-      "participantCount": 50
-    },
-    {
-      "name": "MindWell Mental Health Camp",
-      "image": "https://i.ibb.co/tXFTf82/mental.jpg",
-      "fees": 5,
-      "scheduledDateAndTime": "2024-05-20T18:22",
-      "venueLocation": "Community Mental Health Center, 789 Elm Street, Townsville",
-      "specializedServicesProvided": [
-        "Mental health screenings",
-        "Counseling sessions",
-        "Stress management workshops"
-      ],
-      "healthcareProfessionalsInAttendance": [
-        "Psychiatrists",
-        "Psychologists",
-        "Licensed Counselors"
-      ],
-      "targetAudience": "Individuals seeking mental health support",
-      "participantCount": 90
-    },
-    {
-      "name": "GoldenAge Senior Wellness Camp",
-      "image": "https://i.ibb.co/Z8cCCFW/medical-camp.jpg",
-      "fees": 10,
-      "scheduledDateAndTime": "2023-12-01T15:30",
-      "venueLocation": "Senior Community Center, 101 Elder Avenue, SeniorCity",
-      "specializedServicesProvided": [
-        "Senior health screenings",
-        "Fitness assessments",
-        "Nutritional guidance"
-      ],
-      "healthcareProfessionalsInAttendance": [
-        "Geriatricians",
-        "Physical Therapists",
-        "Nutritionists"
-      ],
-      "targetAudience": "Seniors aged 60 and above",
-      "participantCount": 60
-    }
-  ]
+  {
+    "name": "HeartBeat Wellness Camp",
+    "image": "https://i.ibb.co/qxQpQmw/heart.jpg",
+    "fees": 10,
+    "category":"popular",
+    "scheduledDateAndTime": "2024-08-10T08:15",
+    "venueLocation": "City Community Center, 123 Main Street, Anytown",
+    "specializedServicesProvided": [
+      "Cardiovascular screenings",
+      "Cholesterol checks",
+      "Blood pressure monitoring",
+      "Heart health education sessions"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Cardiologists",
+      "Nurses",
+      "Nutritionists"
+    ],
+    "targetAudience": "Adults aged 30 and above",
+    "participantCount": 0,
+    "description": "HeartBeat Wellness Camp is a comprehensive health event dedicated to promoting heart health. Attendees will benefit from expert cardiovascular screenings, cholesterol checks, and blood pressure monitoring. Our team of healthcare professionals, including cardiologists, nurses, and nutritionists, will provide personalized guidance. The camp is tailored for adults aged 30 and above, aiming to empower them with the knowledge and tools to maintain a healthy heart. Join us at the City Community Center, where you'll find a supportive community committed to your well-being. Together, let's take proactive steps towards a heart-healthy lifestyle.",
+    "accommodationInformation": "Accommodation is not applicable for this camp.",
+    "cancellationRefundPolicy": "In case of cancellation, a full refund will be provided up to 30 days before the event. No refunds will be issued within 30 days of the event.",
+    "whatToBring": "Please bring comfortable clothing, walking shoes, any relevant medical records, and a water bottle."
+  },
+  {
+    "name": "Blossom Women's Wellness Camp",
+    "image": "https://i.ibb.co/3CPjZD3/rmh-interpreter-and-patient.jpg",
+    "fees": 20,
+    "category":"elite",
+    "scheduledDateAndTime": "2025-01-05T21:12",
+    "venueLocation": "Community Health Center, 456 Oak Avenue, Cityville",
+    "specializedServicesProvided": [
+      "Gynecological screenings",
+      "Breast health examinations",
+      "Nutrition counseling",
+      "Women's health seminars"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Gynecologists",
+      "Women's Health Nurses",
+      "Nutritionists"
+    ],
+    "targetAudience": "Women of all ages",
+    "participantCount": 0,
+    "description": "Blossom Women's Wellness Camp celebrates the essence of women's health, offering a range of services designed to empower women of all ages. From essential gynecological screenings and breast health examinations to personalized nutrition counseling, our camp focuses on holistic well-being. Accompanied by a team of dedicated healthcare professionals, including gynecologists, Women's Health Nurses, and nutritionists, participants will gain valuable insights into their health. Join us at the Community Health Center in Cityville for an enriching experience. Blossom into a healthier you with knowledge, support, and a community of like-minded women.",
+    "accommodationInformation": "Accommodation is not applicable for this camp.",
+    "cancellationRefundPolicy": "In case of cancellation, a full refund will be provided up to 30 days before the event. No refunds will be issued within 30 days of the event.",
+    "whatToBring": "Please bring comfortable clothing, a yoga mat, and an open mind ready for self-discovery."
+  },
+  {
+    "name": "SugarCare Diabetes Camp",
+    "image": "https://i.ibb.co/Z8386Gw/diabetis.jpg",
+    "fees": 15,
+    "category":"elite",
+    "scheduledDateAndTime": "2025-07-12T12:30",
+    "venueLocation": "Diabetes Center, 789 Maple Street, Healthville",
+    "specializedServicesProvided": [
+      "Blood glucose testing",
+      "Insulin management workshops",
+      "Dietary consultations"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Endocrinologists",
+      "Diabetes Educators",
+      "Dietitians"
+    ],
+    "targetAudience": "Individuals with diabetes and their caregivers",
+    "participantCount": 0,
+    "description": "SugarCare Diabetes Camp is a vital resource for individuals managing diabetes and their caregivers. Our camp offers crucial services, including blood glucose testing, insulin management workshops, and personalized dietary consultations. Backed by a team of experienced healthcare professionals, including endocrinologists, Diabetes Educators, and dietitians, participants will receive personalized care and education. Join us at the Diabetes Center in Healthville, where we foster a supportive community for those navigating the challenges of diabetes. Together, let's empower individuals and their caregivers to lead healthy and fulfilling lives despite the complexities of diabetes.",
+    "accommodationInformation": "Accommodation is not applicable for this camp.",
+    "cancellationRefundPolicy": "In case of cancellation, a full refund will be provided up to 30 days before the event. No refunds will be issued within 30 days of the event.",
+    "whatToBring": "Please bring any diabetes monitoring devices, a list of current medications, and comfortable clothing suitable for light physical activities."
+  },
+  {
+    "name": "KiddoCare Pediatrics Camp",
+    "image": "https://i.ibb.co/gTWqHkh/kid.jpg",
+    "fees": 0,
+    "category":"popular",
+    "scheduledDateAndTime": "2024-02-15T10:45",
+    "venueLocation": "Pediatric Clinic, 567 Pine Street, Smalltown",
+    "specializedServicesProvided": [
+      "Pediatric vaccinations",
+      "Growth and development assessments",
+      "Parenting workshops"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Pediatricians",
+      "Pediatric Nurses",
+      "Child Psychologists"
+    ],
+    "targetAudience": "Infants and children up to 12 years old",
+    "participantCount": 0,
+    "description": "KiddoCare Pediatrics Camp is dedicated to the well-being of infants and children up to 12 years old. Our camp provides essential pediatric vaccinations, growth and development assessments, and informative parenting workshops. Led by a team of compassionate healthcare professionals, including pediatricians, Pediatric Nurses, and Child Psychologists, the camp aims to ensure the health and happiness of our youngest community members. Join us at the Pediatric Clinic in Smalltown for a nurturing and informative experience. KiddoCare is committed to supporting parents and caregivers on their journey of raising healthy and thriving children.",
+    "accommodationInformation": "Accommodation is not applicable for this camp.",
+    "cancellationRefundPolicy": "In case of cancellation, a full refund will be provided up to 30 days before the event. No refunds will be issued within 30 days of the event.",
+    "whatToBring": "Please bring your child's vaccination records, any relevant medical information, and comfortable clothing for both the child and the accompanying parent or guardian."
+  },
+  {
+    "name": "MindWell Mental Health Camp",
+    "image": "https://i.ibb.co/tXFTf82/mental.jpg",
+    "fees": 5,
+    "category":"popular",
+    "scheduledDateAndTime": "2024-05-20T18:22",
+    "venueLocation": "Community Mental Health Center, 789 Elm Street, Townsville",
+    "specializedServicesProvided": [
+      "Mental health screenings",
+      "Counseling sessions",
+      "Stress management workshops"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Psychiatrists",
+      "Psychologists",
+      "Licensed Counselors"
+    ],
+    "targetAudience": "Individuals seeking mental health support",
+    "participantCount": 0,
+    "description": "MindWell Mental Health Camp is a haven for individuals seeking mental health support. Our camp offers crucial services, including mental health screenings, counseling sessions, and stress management workshops. Guided by a team of compassionate healthcare professionals, including psychiatrists, psychologists, and licensed counselors, participants will find a safe space for healing and growth. Join us at the Community Mental Health Center in Townsville for an empathetic and supportive experience. MindWell is committed to breaking the stigma surrounding mental health and fostering a community that prioritizes well-being and resilience.",
+    "accommodationInformation": "Accommodation is not applicable for this camp.",
+    "cancellationRefundPolicy": "In case of cancellation, a full refund will be provided up to 30 days before the event. No refunds will be issued within 30 days of the event.",
+    "whatToBring": "Please bring any relevant medications, a notebook, and comfortable clothing suitable for relaxation exercises."
+  },
+  {
+    "name": "GoldenAge Senior Wellness Camp",
+    "image": "https://i.ibb.co/Z8cCCFW/medical-camp.jpg",
+    "fees": 10,
+    "category":"popular",
+    "scheduledDateAndTime": "2023-12-01T15:30",
+    "venueLocation": "Senior Community Center, 101 Elder Avenue, SeniorCity",
+    "specializedServicesProvided": [
+      "Senior health screenings",
+      "Fitness assessments",
+      "Nutritional guidance"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Geriatricians",
+      "Physical Therapists",
+      "Nutritionists"
+    ],
+    "targetAudience": "Seniors aged 60 and above",
+    "participantCount": 0,
+    "description": "GoldenAge Senior Wellness Camp is tailored for the health and happiness of seniors aged 60 and above. Our camp offers essential senior health screenings, fitness assessments, and personalized nutritional guidance. Led by a team of dedicated healthcare professionals, including geriatricians, Physical Therapists, and nutritionists, participants will embark on a journey towards holistic well-being. Join us at the Senior Community Center in SeniorCity, where we celebrate the wisdom and vitality of our senior community members. GoldenAge is committed to supporting seniors in living their best lives through health, connection, and joy.",
+    "accommodationInformation": "Accommodation options are available upon request. Please contact us for more information.",
+    "cancellationRefundPolicy": "In case of cancellation, a full refund will be provided up to 30 days before the event. No refunds will be issued within 30 days of the event.",
+    "whatToBring": "Please bring comfortable clothing, a water bottle, any necessary medications, and a positive spirit ready for engaging activities."
+  },
+  {
+    "name": "Yoga Harmony Retreat",
+    "image": "https://i.ibb.co/Bt3J3hL/yoga.jpg",
+    "fees": 15,
+    "category":"elite",
+    "scheduledDateAndTime": "2024-09-20T10:00",
+    "venueLocation": "Serene Mountain Retreat, 456 Tranquil Lane, Blissful Valley",
+    "specializedServicesProvided": [
+      "Daily yoga sessions",
+      "Meditation workshops",
+      "Nutritional guidance",
+      "Stress management seminars"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Certified Yoga Instructors",
+      "Mental Health Counselors",
+      "Nutrition Experts"
+    ],
+    "targetAudience": "All age groups",
+    "participantCount": 0,
+    "description": "Embark on a journey to holistic well-being at the Yoga Harmony Retreat. Immerse yourself in daily yoga sessions, meditation workshops, and gain insights into nutritional wellness. Our team of certified yoga instructors, mental health counselors, and nutrition experts are committed to fostering a harmonious mind-body connection. This retreat is suitable for participants of all age groups, promoting a balanced and serene lifestyle. Join us at the Serene Mountain Retreat for a rejuvenating experience that transcends the ordinary, bringing harmony to your body and soul.",
+    "accommodationInformation": "Accommodation options are available. Participants can choose from shared cabins or private rooms with beautiful views of the surrounding mountains.",
+    "cancellationRefundPolicy": "Full refund available for cancellations made 45 days prior to the retreat. A 50% refund will be provided for cancellations made between 30-45 days. No refunds will be issued within 30 days of the retreat.",
+    "whatToBring": "Please bring your yoga mat, comfortable clothing, a journal, and an open heart ready for self-discovery."
+  },
+  {
+    "name": "Mindful Eating Symposium",
+    "image": "https://i.ibb.co/D8V5pHz/eating.jpg",
+    "fees": 12,
+    "category":"popular",
+    "scheduledDateAndTime": "2024-07-15T12:30",
+    "venueLocation": "Culinary Arts Center, 789 Gourmet Avenue, Foodie Town",
+    "specializedServicesProvided": [
+      "Interactive cooking demonstrations",
+      "Nutritional seminars",
+      "Mindful eating practices",
+      "Individualized dietary consultations"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Registered Dietitians",
+      "Culinary Experts",
+      "Mindfulness Coaches"
+    ],
+    "targetAudience": "Individuals interested in mindful eating",
+    "participantCount": 0,
+    "description": "Join us at the Mindful Eating Symposium for a transformative experience centered around conscious and enjoyable eating. Engage in interactive cooking demonstrations, attend nutritional seminars, and learn the art of mindful eating practices. Our team of registered dietitians, culinary experts, and mindfulness coaches will guide you towards a healthier relationship with food. This symposium is perfect for individuals interested in cultivating a mindful approach to nourishment. Visit the Culinary Arts Center in Foodie Town to savor the flavors of a mindful and balanced diet.",
+    "accommodationInformation": "Accommodation is not provided for this symposium. Participants are responsible for arranging their stay if needed.",
+    "cancellationRefundPolicy": "Full refund available for cancellations made 30 days prior to the symposium. No refunds will be issued within 30 days of the event.",
+    "whatToBring": "Please bring a curious palate, comfortable attire, and a willingness to explore the joy of mindful eating."
+  },
+  {
+    "name": "Nature Retreat & Hiking Expedition",
+    "image": "https://i.ibb.co/8m6WdKv/hiking.jpg",
+    "fees": 18,
+    "category":"elite",
+    "scheduledDateAndTime": "2024-10-05T09:00",
+    "venueLocation": "Wilderness Haven, 234 Tranquil Trail, Nature's Paradise",
+    "specializedServicesProvided": [
+      "Guided nature hikes",
+      "Outdoor meditation sessions",
+      "Adventure sports activities",
+      "Wellness talks under the stars"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Wilderness Guides",
+      "Meditation Instructors",
+      "Adventure Sports Instructors"
+    ],
+    "targetAudience": "Outdoor enthusiasts and nature lovers",
+    "participantCount": 0,
+    "description": "Escape to the serene Wilderness Haven for a rejuvenating Nature Retreat & Hiking Expedition. Immerse yourself in the beauty of nature with guided hikes, outdoor meditation sessions, and thrilling adventure sports activities. Our team of wilderness guides, meditation instructors, and adventure sports experts will lead you on a journey of self-discovery in Nature's Paradise. This retreat is tailored for outdoor enthusiasts and nature lovers seeking a harmonious blend of adventure and wellness. Join us for wellness talks under the stars and let the natural surroundings inspire your soul.",
+    "accommodationInformation": "Accommodation options include cozy cabins nestled in the heart of the wilderness, providing a comfortable and immersive experience.",
+    "cancellationRefundPolicy": "Full refund available for cancellations made 60 days prior to the retreat. A 75% refund will be provided for cancellations made between 30-60 days. No refunds will be issued within 30 days of the retreat.",
+    "whatToBring": "Pack sturdy hiking boots, weather-appropriate clothing, a reusable water bottle, and a sense of adventure."
+  },
+  {
+    "name": "Stress Relief & Mindfulness Workshop",
+    "image": "https://i.ibb.co/mqy3Qm4/minddulness.jpg",
+    "fees": 14,
+    "category":"popular",
+    "scheduledDateAndTime": "2024-06-25T14:00",
+    "venueLocation": "Tranquility Center, 567 Serene Street, Calmville",
+    "specializedServicesProvided": [
+      "Mindfulness meditation sessions",
+      "Stress management workshops",
+      "Yoga for relaxation",
+      "Art therapy sessions"
+    ],
+    "healthcareProfessionalsInAttendance": [
+      "Mindfulness Instructors",
+      "Stress Management Experts",
+      "Yoga and Art Therapists"
+    ],
+    "targetAudience": "Individuals dealing with stress and seeking mindfulness",
+    "participantCount": 0,
+    "description": "Discover inner peace at the Stress Relief & Mindfulness Workshop held at the Tranquility Center in Calmville. Engage in mindfulness meditation sessions, stress management workshops, and calming yoga practices. Our team of experienced mindfulness instructors, stress management experts, and yoga and art therapists are dedicated to helping you alleviate stress and cultivate a mindful lifestyle. This workshop is designed for individuals dealing with stress, providing practical tools for relaxation and emotional well-being. Join us on this transformative journey towards a more serene and balanced life.",
+    "accommodationInformation": "Accommodation is not provided for this workshop. Participants are encouraged to attend daily sessions and return to their own accommodations each day.",
+    "cancellationRefundPolicy": "Full refund available for cancellations made 45 days prior to the workshop. A 50% refund will be provided for cancellations made between 30-45 days. No refunds will be issued within 30 days of the workshop.",
+    "whatToBring": "Bring a yoga mat, comfortable clothing, an open mind, and a willingness to explore the benefits of mindfulness."
+  }
+  
+  
+  
+]
+
+
+
+

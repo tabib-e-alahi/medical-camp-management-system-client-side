@@ -3,6 +3,8 @@ import Main from "../Layouts/Main";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import AvailableCamps from "../Pages/AvailableCamps/AvailableCamps";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -12,6 +14,10 @@ export const router = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>
+        },
+        {
+            path:'available-camps',
+            element:<PrivateRoute><AvailableCamps></AvailableCamps></PrivateRoute>
         },
         {
             path:'/login',

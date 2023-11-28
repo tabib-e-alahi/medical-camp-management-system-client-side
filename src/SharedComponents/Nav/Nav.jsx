@@ -47,7 +47,7 @@ const Nav = () => {
     <>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/login">login</NavLink>
-      <NavLink to='/available-camps'>Available Camps</NavLink>
+      {user && <NavLink to='/available-camps'>Available Camps</NavLink>}
       <NavLink to='/contactUs'>Contact Us</NavLink>
     </>
   );
@@ -55,7 +55,7 @@ const Nav = () => {
   return (
     <div>
       <AppBar position="static" className="">
-        <Container maxWidth="xl" className="lg:fixed lg:z-10 lg:bg-opacity-60 bg-[#82aac6] lg:bg-[#CBE7E4]   lg:pt-12 lg:pb-4 text-black font-medium">
+        <Container maxWidth="xl" className=" bg-[#82aac6] lg:bg-[#478dbf]    lg:pt-12 lg:pb-4 text-black font-medium">
           <Toolbar disableGutters>
             <Typography
               variant="h6"
@@ -138,11 +138,11 @@ const Nav = () => {
             </Box>
 
             {/* Login btn or picture==================== */}
-            <Box sx={{ flexGrow: 0 }}>
+            <Box className=''  sx={{ flexGrow: 0 }}>
               {
-                user ? <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src={user?.photoURL} />
+                user ? <Tooltip className="" title="Open settings">
+                <IconButton className="" onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar className="w-full h-full border-2 border-black " alt="User Image" src={user?.photoURL} />
                 </IconButton>
               </Tooltip>
               :

@@ -4,19 +4,14 @@ import Footer from "../SharedComponents/Footer/Footer";
 
 const Main = () => {
   const location = useLocation();
-  console.log();
+  const noShoulders =
+    location.pathname.includes("login") || location.pathname.includes("signup");
 
   return (
     <div>
-      {location.pathname === "/login" || location.pathname === '/register' ? (
-        <Outlet></Outlet>
-      ) : (
-        <>
-          <Nav></Nav>
-          <Outlet></Outlet>
-          <Footer></Footer>
-        </>
-      )}
+      {noShoulders || <Nav></Nav>}
+      <Outlet></Outlet>
+      {noShoulders || <Footer></Footer>}
     </div>
   );
 };

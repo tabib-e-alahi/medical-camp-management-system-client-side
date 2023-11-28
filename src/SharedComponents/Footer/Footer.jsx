@@ -41,7 +41,8 @@ const Footer = () => {
               </div>
             </div>
             <div className="w-full lg:w-6/12 px-4">
-              <div className="flex flex-wrap items-top mb-6">
+              <div className="flex flex-col md:flex-row items-top gap-6 lg:mb-6">
+
                 <div className="w-full lg:w-4/12 px-4 ml-auto">
                   <span className="block uppercase text-blueGray-500 text-sm font-semibold mb-2">
                     Useful Links
@@ -59,7 +60,7 @@ const Footer = () => {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
                         href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile"
                       >
                         MIT License
@@ -67,7 +68,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
                         href="https://creative-tim.com/terms?ref=njs-profile"
                       >
                         Terms &amp; Conditions
@@ -75,7 +76,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
                         href="https://creative-tim.com/privacy?ref=njs-profile"
                       >
                         Privacy Policy
@@ -83,7 +84,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                        className="text-blueGray-600 hover:text-blueGray-800  block pb-2 text-sm"
                         href="https://creative-tim.com/contact-us?ref=njs-profile"
                       >
                         Contact Us
@@ -91,6 +92,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
+
               </div>
             </div>
           </div>
