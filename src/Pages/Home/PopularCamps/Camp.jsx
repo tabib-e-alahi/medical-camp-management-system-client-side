@@ -16,7 +16,7 @@ const Camp = ({ camp }) => {
 
   const formattedDate =
     moment(scheduledDateAndTime).format("DD MMM YYYY, h:mmA");
-  console.log(formattedDate);
+  // console.log(formattedDate);
   //   console.log(camp);
   return (
     <div className="wrapper  lg:p-8 bg-[#adb8b7]  antialiased text-gray-900 rounded-lg overflow-hidden">

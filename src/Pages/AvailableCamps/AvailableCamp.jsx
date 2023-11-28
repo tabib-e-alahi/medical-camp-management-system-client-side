@@ -1,6 +1,10 @@
 import moment from "moment/moment";
 
+
 const AvailableCamp = ({ camp }) => {
+ 
+
+
   const {
     name,
     image,
@@ -19,32 +23,38 @@ const AvailableCamp = ({ camp }) => {
   return (
     <div className="lg:p-10 bg-[#adb8b7] px-4 md:px-10 lg:px-0  antialiased text-gray-900 rounded-lg overflow-hidden">
       <div className=" flex flex-col px-4 md:px-10 lg:px-0 lg:flex-row lg:justify-center rounded-lg overflow-hidden">
-        <div className="relative ">
+        <div className="">
         <img
           src={image}
           alt=" random imgee"
           className="w-full lg:w-[600px]  lg:h-[400px] object-cover object-center lg:rounded-s-lg shadow-md"
         />
-        <h2 className="absolute top-2 right-2 font-bold bg-white p-2 rounded-full flex justify-center items-center gap-2">
-          Participants:{" "}
-          <span className="  text-2xl text-[#f60]">{participantCount}</span>
-        </h2>
         </div>
 
         <div className="bg-[#d8e2e8] lg:w-[600px]  lg:h-[400px] p-4 lg:py-6 lg:px-8  shadow-lg rounded-r-lg ">
-          <div className="flex justify-between items-center">
-            <div className="flex items-baseline">
-              <div className="ml-2 font-bold  text-xs mr-2 tracking-wider">
-                Date:
+        <div className="flex justify-between items-center">
+              <div className="flex flex-col md:flex-row md:items-center md:gap-4">
+                <div className="flex items-baseline">
+                  <div className="md:ml-2 font-bold  text-xs mr-2 tracking-wider">
+                    Date:
+                  </div>
+                  <span className="bg-teal-200 text-black text-xs px-2 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
+                    {formattedDate}
+                  </span>
+                </div>
+
+                <h2 className="flex gap-1 font-medium items-center">
+                  Participants:
+                  <span className="text-2xl text-[#f60]">
+                    {participantCount}
+                  </span>
+                </h2>
               </div>
-              <span className="bg-teal-200 text-black text-xs px-2 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
-                {formattedDate}
-              </span>
+
+              <h2 className=" bg-gray-100 text-base lg:text-lg text-blue-800 font-bold px-2 py-2  rounded-full   tracking-wide">
+                Fees: {fees}$
+              </h2>
             </div>
-            <h2 className=" bg-gray-100 text-base lg:text-lg text-blue-800 font-bold px-2 py-2  rounded-full   tracking-wide">
-              Fees: {fees}$
-            </h2>
-          </div>
 
           <h4 className="mt-1  text-lg lg:text-2xl font-bold uppercase leading-tight truncate">
             {name}
