@@ -1,11 +1,12 @@
 import moment from "moment/moment";
+import { Link } from "react-router-dom";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 
 const AvailableCamp = ({ camp }) => {
- 
-
 
   const {
+    _id,
     name,
     image,
     fees,
@@ -19,7 +20,7 @@ const AvailableCamp = ({ camp }) => {
 
   const formattedDate =
     moment(scheduledDateAndTime).format("DD MMM YYYY, h:mmA");
-  console.log(formattedDate);
+  // console.log(formattedDate);
   return (
     <div className="lg:p-10 bg-[#adb8b7] px-4 md:px-10 lg:px-0  antialiased text-gray-900 rounded-lg overflow-hidden">
       <div className=" flex flex-col px-4 md:px-10 lg:px-0 lg:flex-row lg:justify-center rounded-lg overflow-hidden">
@@ -95,7 +96,13 @@ const AvailableCamp = ({ camp }) => {
                 </div>
               </div>
             </div>
-            <button className="border bg-sky-400 py-2 text-white font-bold px-4 rounded-xl text-center">See Details</button>
+            <div className="flex justify-end ">
+                <Link to={`/camp-details/${_id}`}>
+                  <button className="p-2  bg-blue-500 text-white hover:bg-blue-600 rounded-lg">
+                    See Details <ArrowRightAltIcon />
+                  </button>
+                </Link>
+              </div>
           </div>
         </div>
       </div>

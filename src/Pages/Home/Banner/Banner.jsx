@@ -20,7 +20,7 @@ const Banner = () => {
     //     </div>
     //   ))}
     // </Carousel>
-    <div className="h-full pt-10 lg:pt-28 bg-[#82aac6] md:mb-20">
+    <div className="h-full pt-8 bg-[#82aac6] md:mb-20">
       <section className=" ">
         <div className="grid grid-cols-1 max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
 

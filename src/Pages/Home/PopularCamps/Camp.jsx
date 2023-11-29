@@ -1,8 +1,11 @@
 import PropTypes from "prop-types";
 import "./Camp.css";
 import moment from "moment";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { Link } from "react-router-dom";
 const Camp = ({ camp }) => {
   const {
+    _id,
     name,
     image,
     fees,
@@ -13,13 +16,14 @@ const Camp = ({ camp }) => {
     targetAudience,
     participantCount,
   } = camp;
+  // console.log(_id);
 
   const formattedDate =
     moment(scheduledDateAndTime).format("DD MMM YYYY, h:mmA");
   // console.log(formattedDate);
   //   console.log(camp);
   return (
-    <div className="wrapper  lg:p-8 bg-[#adb8b7]  antialiased text-gray-900 rounded-lg overflow-hidden">
+    <div className="wrapper lg:p-8 bg-[#adb8b7]  antialiased text-gray-900 rounded-lg overflow-hidden">
       <div className="relative">
         <img
           src={image}
@@ -95,6 +99,13 @@ const Camp = ({ camp }) => {
                     </ul>
                   </div>
                 </div>
+              </div>
+              <div className="flex justify-end ">
+                <Link to={`/camp-details/${_id}`}>
+                  <button className="p-2  bg-blue-500 text-white hover:bg-blue-600 rounded-lg">
+                    See Details <ArrowRightAltIcon />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
