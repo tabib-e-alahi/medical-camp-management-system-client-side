@@ -80,7 +80,7 @@ const Camp = ({ camp }) => {
                 <div className="">
                   <h3 className="font-medium">Special Services:</h3>
                   <ul className="text-sm p-4 pt-2 pl-6 lg:p-0 lg:pl-0 text-gray-600 list-disc">
-                    {specializedServicesProvided.map((service, idx) => (
+                    {specializedServicesProvided?.map((service, idx) => (
                       <li key={idx}>{service}</li>
                     ))}
                   </ul>
@@ -91,7 +91,7 @@ const Camp = ({ camp }) => {
                   <h3 className="font-medium text-xl mb-2">Professionals:</h3>
                   <div className="border-2  p-4 pl-6 rounded overflow-hidden border-[#156668]">
                     <ul className="text-sm font-bold text-gray-600 list-disc ">
-                      {healthcareProfessionalsInAttendance.map(
+                      {healthcareProfessionalsInAttendance?.map(
                         (professional, idx) => (
                           <li key={idx}>{professional}</li>
                         )
