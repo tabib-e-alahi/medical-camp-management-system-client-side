@@ -6,9 +6,10 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions } from "@mui/material";
+import {  CardActionArea, Snackbar } from "@mui/material";
 import { SlLocationPin } from "react-icons/sl";
 import "./CampDetails.css";
+import JoinCampModal from "./JoinCampModal";
 
 const CampDetails = () => {
   const axiosSecure = useAxiosSecure();
@@ -54,7 +55,6 @@ const CampDetails = () => {
 
   return (
     <div className="mt-16 grid grid-cols-3 gap-24">
-     
       <div className="col-span-2">
         <Card>
           <CardActionArea>
@@ -89,9 +89,11 @@ const CampDetails = () => {
 
       <div className="flex flex-col gap-12 ">
         <div className="flex items-center gap-4">
-          <button className="bg-[#f60] hover:bg-[#cd926a] w-[10rem] text-white px-5 py-3 text-xl font-medium rounded-md">
-            Join Camp
-          </button>
+          <JoinCampModal
+            fees={fees}
+            accommodationInformation={accommodationInformation}
+            cancellationRefundPolicy={cancellationRefundPolicy}
+          ></JoinCampModal>
           <p className="text-2xl font-bold ">
             Join Fee: <span className="custom-class text-2xl">{fees}$</span>
           </p>
@@ -148,6 +150,11 @@ const CampDetails = () => {
             <span className="custom-class">{formattedDate}</span>
           </p>
         </div>
+      </div>
+      <div>
+      <Snackbar open={true} className="bg-red-500 py-6 px-8 text-2xl font-medium text-white rounded-md">
+        <h1 className="custom-class">Participant Registered: <span className="text-3xl">{participantCount}</span></h1>
+      </Snackbar>
       </div>
     </div>
   );
