@@ -1,14 +1,17 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Modal from "@mui/material/Modal";
-import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
 
 const style = {
   position: "absolute",
   top: "40%",
   left: "50%",
-  transform: "translate(-50%, -50%)",
+  transform: "translate(-50%, -20%)",
   bgcolor: "background.paper",
   borderRadius: "5px",
   boxShadow: 24,
@@ -19,10 +22,15 @@ const JoinCampModal = ({
   fees,
   cancellationRefundPolicy,
   accommodationInformation,
+  camp_id,
 }) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const { user } = useAuth();
+  const [participant, setParticipant] = useState([]);
+
+  const axiosSecure = useAxiosSecure();
 
   const {
     register,
@@ -32,12 +40,56 @@ const JoinCampModal = ({
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
+    // const {name,phone,age,gender,address,health,emergency} = data;
+    const newCampyData = {
+      campy_name: data.name,
+      campy_email: user.email,
+      camp_id: camp_id,
+      campy_age: data.age,
+      campy_gender: data.gender,
+      campy_phone: data.phone,
+      campy_address: data.address,
+      campy_health: data.health,
+      campy_emergency: data.emergency,
+    };
+    // console.log(newCampyData);
+
+    axiosSecure.get(`/campy-data?email=${user?.email}`).then((res) => {
+      console.log(res.data);
+      setParticipant(res?.data);
+    });
+
+    console.log(participant);
+    const isAvailable = participant.find((p) => p.camp_id === camp_id);
+    // console.log(isAvailable);
+    if (isAvailable) {
+      reset();
+      handleClose();
+      Swal.fire({
+        title: "Already Registered",
+        text: "A participant can  register only once.",
+        icon: "error",
+      });
+      return;
+    }
+
+    //sending the new campy data to database
+    axiosSecure.post("/campy-data", newCampyData).then((res) => {
+      reset();
+      handleClose();
+      if (res.data.insertedId) {
+        Swal.fire({
+          title: "Registration Successful",
+          text: "Mar your calender for the camp.",
+          icon: "success",
+        });
+      }
+    });
   };
 
   return (
     <div>
-      {/* <Button onClick={handleOpen}>Open modal</Button> */}
       <button
         onClick={handleOpen}
         className="bg-[#f60] hover:bg-[#cd926a] w-[10rem] text-white px-5 py-3 text-xl font-medium rounded-md"
@@ -49,7 +101,7 @@ const JoinCampModal = ({
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        className="overflow-y-auto mt-8 "
+        className="overflow-y-auto  "
       >
         <Box className="w-[700px]  mt-20 h-fit " sx={style}>
           <h1 className="my-4 text-2xl font-semibold text-center">
@@ -187,6 +239,19 @@ const JoinCampModal = ({
                   {errors.emergency && (
                     <span className="text-red-500">This field is required</span>
                   )}
+                </div>
+
+                {/* =============health information================================ */}
+                <div className="flex flex-col gap-1 col-span-2">
+                  <label htmlFor="" className="font-semibold text-lg">
+                    What type health problem you have?(Optional)
+                  </label>
+                  <input
+                    {...register("health")}
+                    type="text"
+                    className="border-2 border-sky-400 p-3 rounded-lg"
+                    placeholder="Home,Street,City,Country"
+                  />
                 </div>
               </section>
 

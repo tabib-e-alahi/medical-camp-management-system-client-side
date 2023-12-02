@@ -14,13 +14,11 @@ import JoinCampModal from "./JoinCampModal";
 const CampDetails = () => {
   const axiosSecure = useAxiosSecure();
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
   // axiosSecure.get(`/camp-details/${id}`)
 
   const {
     data: camp = {},
-    isPending: loading,
-    refetch,
   } = useQuery({
     queryKey: ["camp"],
     queryFn: async () => {
@@ -29,9 +27,10 @@ const CampDetails = () => {
     },
   });
 
-  console.log(camp);
+  // console.log(camp);
 
   const {
+    _id,
     name,
     image,
     fees,
@@ -47,11 +46,11 @@ const CampDetails = () => {
     whatToBring,
   } = camp;
   const newLocation = venueLocation?.split(",");
-  console.log(newLocation);
+  // console.log(newLocation);
 
   const formattedDate =
     moment(scheduledDateAndTime).format("DD MMM YYYY, h:mmA");
-  console.log(specializedServicesProvided);
+  // console.log(specializedServicesProvided);
 
   return (
     <div className="mt-16 grid grid-cols-3 gap-24">
@@ -93,6 +92,7 @@ const CampDetails = () => {
             fees={fees}
             accommodationInformation={accommodationInformation}
             cancellationRefundPolicy={cancellationRefundPolicy}
+            camp_id={_id}
           ></JoinCampModal>
           <p className="text-2xl font-bold ">
             Join Fee: <span className="custom-class text-2xl">{fees}$</span>
