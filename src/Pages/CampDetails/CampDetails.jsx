@@ -10,6 +10,8 @@ import {  CardActionArea, Snackbar } from "@mui/material";
 import { SlLocationPin } from "react-icons/sl";
 import "./CampDetails.css";
 import JoinCampModal from "./JoinCampModal";
+// import useParticipantCount from "../../hooks/useParticipantCount";
+
 
 const CampDetails = () => {
   const axiosSecure = useAxiosSecure();
@@ -47,6 +49,13 @@ const CampDetails = () => {
   } = camp;
   const newLocation = venueLocation?.split(",");
   // console.log(newLocation);
+
+
+ 
+  
+
+
+
 
   const formattedDate =
     moment(scheduledDateAndTime).format("DD MMM YYYY, h:mmA");

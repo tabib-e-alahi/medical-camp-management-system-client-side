@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
+import useParticipantCount from "../../hooks/useParticipantCount";
 
 const style = {
   position: "absolute",
@@ -28,9 +29,10 @@ const JoinCampModal = ({
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
   const { user } = useAuth();
-  const [participant, setParticipant] = useState([]);
+  const [participants, setParticipants] = useState(0);
 
   const axiosSecure = useAxiosSecure();
+  const [participatedCamps, refetch] = useParticipantCount();
 
   const {
     register,
@@ -53,40 +55,45 @@ const JoinCampModal = ({
       campy_health: data.health,
       campy_emergency: data.emergency,
     };
-    // console.log(newCampyData);
 
-    axiosSecure.get(`/campy-data?email=${user?.email}`).then((res) => {
-      console.log(res.data);
-      setParticipant(res?.data);
-    });
+    refetch(`/campy-data?type={"email": '${user?.email}'}`);
+    console.log(participatedCamps);
 
-    console.log(participant);
-    const isAvailable = participant.find((p) => p.camp_id === camp_id);
-    // console.log(isAvailable);
+    const isAvailable = participatedCamps.find((p) => p.camp_id === camp_id);
+
     if (isAvailable) {
-      reset();
-      handleClose();
+      // reset();
+      // handleClose();
       Swal.fire({
         title: "Already Registered",
         text: "A participant can  register only once.",
         icon: "error",
       });
-      return;
+      // return;
     }
 
     //sending the new campy data to database
     axiosSecure.post("/campy-data", newCampyData).then((res) => {
-      reset();
-      handleClose();
+      console.log(res.data);
       if (res.data.insertedId) {
+        reset();
+        handleClose();
+
         Swal.fire({
           title: "Registration Successful",
           text: "Mar your calender for the camp.",
           icon: "success",
         });
       }
+      refetch("/campy-data");
+      setParticipants(participatedCamps.length);
+      console.log(participants);
     });
+    axiosSecure
+        .patch(`/campy-data/${camp_id}`, { participants })
+        .then((res) => console.log(res.data));
   };
+  // console.log(participants);
 
   return (
     <div>
@@ -140,6 +147,7 @@ const JoinCampModal = ({
                     type="number"
                     className="border-2 border-sky-400 p-3 rounded-lg"
                     placeholder="01XXXXXXXXX"
+                    value="12345678900"
                     min={0}
                   />
                   {errors.phone && (
@@ -233,6 +241,7 @@ const JoinCampModal = ({
                   <input
                     {...register("emergency", { required: true })}
                     type="number"
+                    value="12345678900"
                     className="border-2 border-sky-400 p-3 rounded-lg"
                     placeholder="01XXXXXXXXX"
                   />
