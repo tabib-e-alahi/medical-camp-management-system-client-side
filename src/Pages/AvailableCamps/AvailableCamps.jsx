@@ -29,7 +29,7 @@ const AvailableCamps = () => {
             Available Camps
           </h1>
           <div className="grid grid-cols-1  gap-10">
-            {camps.map((camp, idx) => (
+            {camps?.map((camp, idx) => (
               <AvailableCamp key={idx} camp={camp}></AvailableCamp>
             ))}
           </div>

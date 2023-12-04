@@ -11,11 +11,15 @@ import Dashboard from "../Layouts/Dashboard";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import OrganizerRoute from "./OrganizerRoute";
 import ManageCamps from "../Pages/Dashboard/ManageCamps/ManageCamps";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
+import ManageRegisteredCamps from "../Pages/Dashboard/ManageRegisteredCamps/ManageRegisteredCamps";
+import ParticipantProfile from "../Pages/Dashboard/ParticipantProfile/ParticipantProfile";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <Main></Main>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
             path:'/',
@@ -42,8 +46,16 @@ export const router = createBrowserRouter([
     {
         path: 'dashboard',
         element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
+            //participant routes
+            {
+                path:'participant-profile',
+                element:<ParticipantProfile></ParticipantProfile>
 
+            },
+
+            
             // Organizer only route 
             {
                 path:'add-a-camp',
@@ -56,6 +68,10 @@ export const router = createBrowserRouter([
             {
                 path:'manage-camps',
                 element:<OrganizerRoute><ManageCamps></ManageCamps></OrganizerRoute>
+            },
+            {
+                path:'manage-registered-camps',
+                element:<OrganizerRoute><ManageRegisteredCamps></ManageRegisteredCamps></OrganizerRoute>
             },
         ]
     }

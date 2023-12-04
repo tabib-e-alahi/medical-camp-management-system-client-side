@@ -27,6 +27,7 @@ import {
 import { Link, Outlet } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import useOrganizer from "../hooks/useOrganizer";
+import HealmetTitle from "../hooks/HealmetTitle";
 
 const drawerWidth = 240;
 
@@ -41,10 +42,11 @@ const Dashboard = () => {
 
   const drawer = (
     <div>
+        <HealmetTitle title='Dashboard'></HealmetTitle>
       <Toolbar />
       <Divider />
         {/* ["Organizer Profile", "Add a camp", "", ""] */}
-        {isOrganizer && 
+        {isOrganizer ?
         <List>
             <ListItem>             
                 <ListItemIcon><Person2 /></ListItemIcon>
@@ -60,11 +62,34 @@ const Dashboard = () => {
             </ListItem>
             <ListItem>             
                 <ListItemIcon><AppRegistration /></ListItemIcon>
-                <ListItemText primary='Registered Camps' />           
+                <Link to='/dashboard/manage-registered-camps'><ListItemText primary='Registered Camps' />  </Link>         
             </ListItem>
             <ListItem>             
                 <ListItemIcon><FaUser /></ListItemIcon>
                 <Link to='/dashboard/all-users'><ListItemText primary='All users' /></Link>          
+            </ListItem>
+      </List>
+:
+<List>
+            <ListItem>             
+                <ListItemIcon><Person2 /></ListItemIcon>
+                <Link to='/dashboard/participant-profile'><ListItemText primary='My Profile' /> </Link>          
+            </ListItem>
+            <ListItem>             
+                <ListItemIcon><Add /></ListItemIcon>
+                <Link to='/dashboard/registered-camps'><ListItemText primary='Registered Camps' /></Link>           
+            </ListItem>
+            <ListItem>             
+                <ListItemIcon><ManageAccounts /></ListItemIcon>
+                <Link to='/dashboard/payment-history'><ListItemText primary='Payment History' /></Link>           
+            </ListItem>
+            <ListItem>             
+                <ListItemIcon><AppRegistration /></ListItemIcon>
+                <Link to='/dashboard/manage-registered-camps'><ListItemText primary='Registered Camps' />  </Link>         
+            </ListItem>
+            <ListItem>             
+                <ListItemIcon><FaUser /></ListItemIcon>
+                <Link to='/dashboard/feedback-and-ratings'><ListItemText primary='Feedback And Ratings' /></Link>          
             </ListItem>
       </List>
       }
