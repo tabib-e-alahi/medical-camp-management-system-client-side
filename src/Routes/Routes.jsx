@@ -6,6 +6,8 @@ import Register from "../Pages/Register/Register";
 import AvailableCamps from "../Pages/AvailableCamps/AvailableCamps";
 import PrivateRoute from "./PrivateRoute";
 import CampDetails from "../Pages/CampDetails/CampDetails";
+import AddCamp from "../Pages/Dashboard/AddCamp/AddCamp";
+import Dashboard from "../Layouts/Dashboard";
 
 export const router = createBrowserRouter([
     {
@@ -34,4 +36,14 @@ export const router = createBrowserRouter([
         },
       ]
     },
+    {
+        path: 'dashboard',
+        element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children:[
+            {
+                path:'add-a-camp',
+                element:<AddCamp></AddCamp>
+            }
+        ]
+    }
   ]);

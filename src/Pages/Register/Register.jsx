@@ -1,11 +1,15 @@
 import { Button } from "@mui/material";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "../../SharedComponents/SocialLogin/SocialLogin";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { createUser, updateUserProfile } = useAuth();
+  const axiosPublic = useAxiosPublic();
+  const navigate = useNavigate()
 
   const {
     register,
@@ -24,7 +28,19 @@ const Register = () => {
         .then(() => {
           const userInfo = { name: data.name, email: data.email };
           console.log(userInfo);
-          reset();
+          axiosPublic.post('/users', userInfo)
+          .then(res => {
+            if(res.data.insertedId){
+              console.log('User added: ',res.data);
+              reset();
+              Swal.fire({
+                title: "Registration Completed",
+                text: "thanks For registering",
+                icon: "success"
+              });
+              navigate('/')
+            } 
+          })
         })
         .catch((error) => console.log(error));
     });

@@ -46,7 +46,7 @@ const Nav = () => {
   const navLinks = (
     <>
       <NavLink to="/">Home</NavLink>
-      <NavLink to="/login">login</NavLink>
+      {user && <NavLink to="/dashboard">Dashboard</NavLink>}
       {user && <NavLink to='/available-camps'>Available Camps</NavLink>}
       <NavLink to='/contactUs'>Contact Us</NavLink>
     </>
