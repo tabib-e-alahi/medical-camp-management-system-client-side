@@ -1,13 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "./useAxiosPublic";
+
+import useAxiosSecure from "./useAxiosSecure";
 
 
 const useParticipantCount = () => {
-    const  axiosPublic = useAxiosPublic();
+    
+    const axiosSecure= useAxiosSecure()
     const {  data: participatedCamps=[],refetch} =useQuery({
         queryKey: ['participatedCamps'],
         queryFn: async() =>{
-            const res = await axiosPublic.get('/campy-data')
+            const res = await axiosSecure.get('/campy-data')
             return res.data
         }
     })

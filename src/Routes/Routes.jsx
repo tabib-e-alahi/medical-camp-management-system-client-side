@@ -14,6 +14,7 @@ import ManageCamps from "../Pages/Dashboard/ManageCamps/ManageCamps";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import ManageRegisteredCamps from "../Pages/Dashboard/ManageRegisteredCamps/ManageRegisteredCamps";
 import ParticipantProfile from "../Pages/Dashboard/ParticipantProfile/ParticipantProfile";
+import RegsiteredCamps from "../Pages/Dashboard/RegsiteredCamps/RegsiteredCamps";
 
 export const router = createBrowserRouter([
     {
@@ -54,8 +55,13 @@ export const router = createBrowserRouter([
                 element:<ParticipantProfile></ParticipantProfile>
 
             },
+            {
+                path:'registered-camps',
+                element:<RegsiteredCamps></RegsiteredCamps>
 
-            
+            },
+
+
             // Organizer only route 
             {
                 path:'add-a-camp',

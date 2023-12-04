@@ -38,7 +38,7 @@ const Dashboard = () => {
     setMobileOpen(!mobileOpen);
   };
   const [isOrganizer] = useOrganizer()
-  console.log(isOrganizer);
+//   console.log(isOrganizer);
 
   const drawer = (
     <div>

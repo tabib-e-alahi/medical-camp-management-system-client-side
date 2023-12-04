@@ -57,19 +57,19 @@ const JoinCampModal = ({
     };
 
     refetch(`/campy-data?type={"email": '${user?.email}'}`);
-    console.log(participatedCamps);
+    // console.log(participatedCamps);
 
     const isAvailable = participatedCamps.find((p) => p.camp_id === camp_id);
 
     if (isAvailable) {
-      // reset();
-      // handleClose();
+      reset();
+      handleClose();
       Swal.fire({
         title: "Already Registered",
         text: "A participant can  register only once.",
         icon: "error",
       });
-      // return;
+      return;
     }
 
     //sending the new campy data to database
@@ -147,7 +147,7 @@ const JoinCampModal = ({
                     type="number"
                     className="border-2 border-sky-400 p-3 rounded-lg"
                     placeholder="01XXXXXXXXX"
-                    value="12345678900"
+                    
                     min={0}
                   />
                   {errors.phone && (
@@ -241,7 +241,7 @@ const JoinCampModal = ({
                   <input
                     {...register("emergency", { required: true })}
                     type="number"
-                    value="12345678900"
+                    
                     className="border-2 border-sky-400 p-3 rounded-lg"
                     placeholder="01XXXXXXXXX"
                   />
