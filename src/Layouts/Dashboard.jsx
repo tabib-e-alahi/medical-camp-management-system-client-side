@@ -25,6 +25,8 @@ import {
   Person2,
 } from "@mui/icons-material";
 import { Link, Outlet } from "react-router-dom";
+import { FaUser } from "react-icons/fa";
+import useOrganizer from "../hooks/useOrganizer";
 
 const drawerWidth = 240;
 
@@ -34,7 +36,8 @@ const Dashboard = () => {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-  const isOrganizer = true
+  const [isOrganizer] = useOrganizer()
+  console.log(isOrganizer);
 
   const drawer = (
     <div>
@@ -53,11 +56,15 @@ const Dashboard = () => {
             </ListItem>
             <ListItem>             
                 <ListItemIcon><ManageAccounts /></ListItemIcon>
-                <ListItemText primary='Manage Camps' />           
+                <Link to='/dashboard/manage-camps'><ListItemText primary='Manage Camps' /></Link>           
             </ListItem>
             <ListItem>             
                 <ListItemIcon><AppRegistration /></ListItemIcon>
                 <ListItemText primary='Registered Camps' />           
+            </ListItem>
+            <ListItem>             
+                <ListItemIcon><FaUser /></ListItemIcon>
+                <Link to='/dashboard/all-users'><ListItemText primary='All users' /></Link>          
             </ListItem>
       </List>
       }
@@ -95,6 +102,7 @@ const Dashboard = () => {
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
+          
         }}
       >
         <Toolbar>
@@ -103,7 +111,7 @@ const Dashboard = () => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { sm: "none" }}}
           >
             <MenuIcon />
           </IconButton>
@@ -150,7 +158,6 @@ const Dashboard = () => {
         </Drawer>
       </Box>
       <div className="w-full" >
-        <Toolbar />
         <Outlet></Outlet>
       </div>
     </Box>

@@ -8,6 +8,9 @@ import PrivateRoute from "./PrivateRoute";
 import CampDetails from "../Pages/CampDetails/CampDetails";
 import AddCamp from "../Pages/Dashboard/AddCamp/AddCamp";
 import Dashboard from "../Layouts/Dashboard";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import OrganizerRoute from "./OrganizerRoute";
+import ManageCamps from "../Pages/Dashboard/ManageCamps/ManageCamps";
 
 export const router = createBrowserRouter([
     {
@@ -40,10 +43,20 @@ export const router = createBrowserRouter([
         path: 'dashboard',
         element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children:[
+
+            // Organizer only route 
             {
                 path:'add-a-camp',
-                element:<AddCamp></AddCamp>
-            }
+                element:<OrganizerRoute><AddCamp></AddCamp></OrganizerRoute>
+            },
+            {
+                path:'all-users',
+                element:<OrganizerRoute><AllUsers></AllUsers></OrganizerRoute>
+            },
+            {
+                path:'manage-camps',
+                element:<OrganizerRoute><ManageCamps></ManageCamps></OrganizerRoute>
+            },
         ]
     }
   ]);
