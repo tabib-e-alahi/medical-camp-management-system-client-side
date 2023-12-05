@@ -44,7 +44,7 @@ const Camp = ({ camp }) => {
                     Date:
                   </div>
                   <span className="bg-teal-200 text-black text-xs px-2 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
-                    {formattedDate}
+                    {scheduledDateAndTime ? formattedDate : 'Information N/A'}
                   </span>
                 </div>
 
@@ -73,16 +73,16 @@ const Camp = ({ camp }) => {
                 <span className="text-black mr-1 text-sm font-medium">
                   Recommended for:
                 </span>{" "}
-                <span>{targetAudience}</span>
+                <span>{targetAudience ? targetAudience : "Information N/A"}</span>
               </span>
 
               <div className="flex flex-col-reverse    md:flex-row md:justify-between md:items-center gap-4 md:gap-0 ">
                 <div className="">
                   <h3 className="font-medium">Special Services:</h3>
                   <ul className="text-sm p-4 pt-2 pl-6 lg:p-0 lg:pl-0 text-gray-600 list-disc">
-                    {specializedServicesProvided?.map((service, idx) => (
+                    {specializedServicesProvided ? specializedServicesProvided?.map((service, idx) => (
                       <li key={idx}>{service}</li>
-                    ))}
+                    )) : 'N/A'}
                   </ul>
                 </div>
 
@@ -91,11 +91,11 @@ const Camp = ({ camp }) => {
                   <h3 className="font-medium text-xl mb-2">Professionals:</h3>
                   <div className="border-2  p-4 pl-6 rounded overflow-hidden border-[#156668]">
                     <ul className="text-sm font-bold text-gray-600 list-disc ">
-                      {healthcareProfessionalsInAttendance?.map(
+                      {healthcareProfessionalsInAttendance ? healthcareProfessionalsInAttendance?.map(
                         (professional, idx) => (
                           <li key={idx}>{professional}</li>
                         )
-                      )}
+                      ) : 'Information N/A'}
                     </ul>
                   </div>
                 </div>

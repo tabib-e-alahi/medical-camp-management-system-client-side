@@ -15,6 +15,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import ManageRegisteredCamps from "../Pages/Dashboard/ManageRegisteredCamps/ManageRegisteredCamps";
 import ParticipantProfile from "../Pages/Dashboard/ParticipantProfile/ParticipantProfile";
 import RegsiteredCamps from "../Pages/Dashboard/RegsiteredCamps/RegsiteredCamps";
+import FeedBack from "../Pages/Dashboard/FeedBack/FeedBack";
 
 export const router = createBrowserRouter([
     {
@@ -58,6 +59,11 @@ export const router = createBrowserRouter([
             {
                 path:'registered-camps',
                 element:<RegsiteredCamps></RegsiteredCamps>
+
+            },
+            {
+                path:'feedback-and-ratings',
+                element:<FeedBack></FeedBack>
 
             },
 
