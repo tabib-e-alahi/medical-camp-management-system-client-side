@@ -18,6 +18,7 @@ import RegsiteredCamps from "../Pages/Dashboard/RegsiteredCamps/RegsiteredCamps"
 import FeedBack from "../Pages/Dashboard/FeedBack/FeedBack";
 import OrganizerProfile from "../Pages/Dashboard/OrganizerProfile/OrganizerProfile";
 import AddUpComingCamps from "../Pages/Dashboard/AddUpComingCamps/AddUpComingCamps";
+import UpComingCampDetails from "../Pages/Home/UpComingCamps/UpComingCampDetails";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,11 @@ export const router = createBrowserRouter([
             path:'/register',
             element:<Register></Register>
         },
+        {
+            path:'upComing-camps-details/:id',
+            element:<PrivateRoute><UpComingCampDetails></UpComingCampDetails></PrivateRoute>
+
+        },
       ]
     },
     {
@@ -68,7 +74,7 @@ export const router = createBrowserRouter([
                 element:<FeedBack></FeedBack>
 
             },
-
+           
 
             // Organizer only route 
             {

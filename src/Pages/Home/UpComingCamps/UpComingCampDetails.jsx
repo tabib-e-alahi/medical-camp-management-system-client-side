@@ -1,21 +1,21 @@
 import { useParams } from "react-router-dom";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
-import moment from "moment/moment";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import {  CardActionArea, Snackbar } from "@mui/material";
 import { SlLocationPin } from "react-icons/sl";
-import "./CampDetails.css";
-import JoinCampModal from "./JoinCampModal";
-// import useParticipantCount from "../../hooks/useParticipantCount";
+import moment from "moment/moment";
+import JoinCampModal from "../../CampDetails/JoinCampModal";
 
 
-const CampDetails = () => {
-  const axiosSecure = useAxiosSecure();
+
+const UpComingCampDetails = () => {
+    const axiosSecure = useAxiosSecure();
   const { id } = useParams();
+  console.log(id);
 
 
   const {
@@ -23,12 +23,11 @@ const CampDetails = () => {
   } = useQuery({
     queryKey: ["camp"],
     queryFn: async () => {
-      const res = await axiosSecure.get(`/camp-details/${id}`);
+      const res = await axiosSecure.get(`/upComing-camps/${id}`);
       return res.data;
     },
   });
-
-  // console.log(camp);
+  console.log(camp);
 
   const {
     _id,
@@ -48,20 +47,13 @@ const CampDetails = () => {
   } = camp;
   const newLocation = venueLocation?.split(",");
   // console.log(newLocation);
-
-
- 
+  const formattedDate =
+    moment(scheduledDateAndTime).format("DD MMM YYYY, h:mmA");
   
 
 
-
-
-  const formattedDate =
-    moment(scheduledDateAndTime).format("DD MMM YYYY, h:mmA");
-  // console.log(specializedServicesProvided);
-
-  return (
-    <div className="mt-16 grid grid-cols-3 gap-24">
+    return (
+        <div className="mt-16 grid grid-cols-3 gap-24">
       <div className="col-span-2">
         <Card>
           <CardActionArea>
@@ -165,7 +157,7 @@ const CampDetails = () => {
       </Snackbar>
       </div>
     </div>
-  );
+    );
 };
 
-export default CampDetails;
+export default UpComingCampDetails;
