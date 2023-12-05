@@ -16,7 +16,7 @@ const AvailableCamps = () => {
         const res = await axiosSecure.get('/camps');
         return res.data;
     }
-})
+})s
   
   return (
     <>
@@ -24,7 +24,7 @@ const AvailableCamps = () => {
         loading ?
         <Lottie className="w-3/4 mx-auto" animationData={loader} loop={true} />
         :
-        <div className=" mt-8 lg:mt-16">
+        <div className=" mt-8lg:mt-16">
           <h1 className="text-center text-5xl mb-6 lg:mb-16 font-bold">
             Available Camps
           </h1>

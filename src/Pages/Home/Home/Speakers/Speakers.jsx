@@ -14,10 +14,10 @@ const Speakers = () => {
   return (
     <div className="mt-24">
       <h1 className="text-5xl font-serif text-center mb-16">Some WellKnown <span className="font-semibold text-[#F25421]">Speakers</span></h1>
-      <div className="max-w-7xl mx-auto grid grid-cols-4 gap-14">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14">
        {
         speakers.map((speaker,idx) =>  
-        <Card key={idx} sx={{ height: 350, width: 280,borderRadius:10,border:0,padding:0}}>
+        <Card key={idx} sx={{ height: 350, width: 280,borderRadius:10,border:0,padding:0,marginRight:"auto", marginLeft:'auto'}}>
         <CardCover >
           <img
             src={speaker.speaker_img}

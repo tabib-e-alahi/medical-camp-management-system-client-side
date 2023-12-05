@@ -46,11 +46,12 @@ const PopularCamps = () => {
   // console.log(loading);
 
   return (
-    <div className=" ">
-      <form className="flex gap-2 items-center" onSubmit={handleSorting}>
-        <label htmlFor="" className="text-lg font-medium">
+    <div className="mt-8 ">
+      <form className="flex  flex-col lg:flex-row gap-2 items-center" onSubmit={handleSorting}>
+        <label htmlFor="" className=" text-lg  font-medium">
           Sort by Participant Engagement:
         </label>
+        <div className="flex gap-2">
         <select
           name="category"
           className="border-2 border-sky-200 rounded-md px-4 py-2"
@@ -64,9 +65,10 @@ const PopularCamps = () => {
         <button className="bg-sky-400 py-2 px-5 text-white font-medium rounded-md">
           Sort
         </button>
+        </div>
       </form>
 
-      <h1 className="text-4xl font-semibold mb-8 mt-10">
+      <h1 className="text-3xl text-center md:text-4xl font-semibold mb-8 mt-10">
         Popular medical camps:
       </h1>
       <div className=" grid grid-cols-1 lg:grid-cols-2 gap-10  px-4  lg:px-0">
