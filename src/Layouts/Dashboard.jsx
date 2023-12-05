@@ -50,7 +50,7 @@ const Dashboard = () => {
         <List>
             <ListItem>             
                 <ListItemIcon><Person2 /></ListItemIcon>
-                <ListItemText primary='Organizer Profile' />           
+                <Link to='/dashboard/organizer-profile'><ListItemText primary='Organizer Profile' /> </Link>          
             </ListItem>
             <ListItem>             
                 <ListItemIcon><Add /></ListItemIcon>
@@ -67,6 +67,10 @@ const Dashboard = () => {
             <ListItem>             
                 <ListItemIcon><FaUser /></ListItemIcon>
                 <Link to='/dashboard/all-users'><ListItemText primary='All users' /></Link>          
+            </ListItem>
+            <ListItem>             
+                <ListItemIcon><FaUser /></ListItemIcon>
+                <Link to='/dashboard/add-upcoming-camp'><ListItemText primary='Add UpComing Camps' /></Link>          
             </ListItem>
       </List>
 :

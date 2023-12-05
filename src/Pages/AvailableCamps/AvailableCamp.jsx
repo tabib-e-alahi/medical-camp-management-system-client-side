@@ -1,6 +1,7 @@
 import moment from "moment/moment";
 import { Link } from "react-router-dom";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import HealmetTitle from "../../hooks/HealmetTitle";
 
 
 const AvailableCamp = ({ camp }) => {
@@ -23,6 +24,7 @@ const AvailableCamp = ({ camp }) => {
   // console.log(formattedDate);
   return (
     <div className="lg:p-10 bg-[#adb8b7] px-4 md:px-10 lg:px-0  antialiased text-gray-900 rounded-lg overflow-hidden">
+      <HealmetTitle title='Available Camps'></HealmetTitle>
       <div className=" flex flex-col px-4 md:px-10 lg:px-0 lg:flex-row lg:justify-center rounded-lg overflow-hidden">
         <div className="">
         <img
