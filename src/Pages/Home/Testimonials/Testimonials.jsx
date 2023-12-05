@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 
 import "./Testimonials.css";
 import Rating from "@mui/material/Rating";
-import Typography from "@mui/material/Typography";
+
 
 // import required modules
 import { EffectCoverflow, Pagination } from "swiper/modules";

@@ -3,6 +3,7 @@ import Camp from "./Camp";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const PopularCamps = () => {
   const axiosPublic = useAxiosPublic();
@@ -73,10 +74,15 @@ const PopularCamps = () => {
           <Camp key={camp.name} camp={camp}></Camp>
         ))}
       </div>
+      <div className="mt-10 flex justify-center">
+        <Link to='/available-camps'>
+          <button className="px-6 py-4 rounded-md bg-sky-500 text-white text-lg font-medium">
+            See All Camps
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
 
 export default PopularCamps;
-
-

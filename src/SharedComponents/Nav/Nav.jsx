@@ -45,10 +45,10 @@ const Nav = () => {
 
   const navLinks = (
     <>
-      <NavLink to="/">Home</NavLink>
-      {user && <NavLink to="/dashboard">Dashboard</NavLink>}
-      {user && <NavLink to='/available-camps'>Available Camps</NavLink>}
-      <NavLink to='/contactUs'>Contact Us</NavLink>
+      <NavLink className='text-white font-medium' to="/">Home</NavLink>
+      {user && <NavLink className='text-white font-medium' to="/dashboard">Dashboard</NavLink>}
+      {user && <NavLink className='text-white font-medium' to='/available-camps'>Available Camps</NavLink>}
+      <NavLink className='text-white font-medium' to='/contactUs'>Contact Us</NavLink>
     </>
   );
 
