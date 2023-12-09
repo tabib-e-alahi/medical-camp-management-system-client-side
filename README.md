@@ -1,12 +1,12 @@
-# Live Site Link
-
-- https://medical-camp-57e62.web.app
-- server side: https://github.com/tabib-e-alahi/medical-camp-management-system-server-side
+#### Live Site Link: https://medical-camp-57e62.web.app
+#### Server Side Link:
+- server-side: https://github.com/tabib-e-alahi/medical-camp-management-system-server-side
 
 # Features
 
-- User role base website(participant, Organizer)
-- dynamic id loader
+- User role based website(participant, Organizer)
+- Dynamic ID loader
 - tanstack query used
+- jwt token system
 - responsive
-- axios interceptor used
+- Axios interceptor used
